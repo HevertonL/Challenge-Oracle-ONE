@@ -29,17 +29,21 @@
       </div>
   
       <div class="botao">
-        <button class="btn-criptografar">Criptografar</button>
-        <button class="btn-descriptografar">Descriptografar</button>
+        <button class="btn-criptografar" onclick="btnencriptar()">
+          Criptografar
+        </button>
+        <button class="btn-descriptografar" onclick="btndesencriptar()">Descriptografar</button>
       </div>
       
     </section>
   
     <section>
       <textarea class="mens-criptografada" cols="20" rows="10"></textarea>
-      <button class="btn-copiar">Copiar</button>
+      <button id="btn-copiar" onclick="btnCopiar()">Copiar</button>
     </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
