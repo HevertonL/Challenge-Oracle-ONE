@@ -1,5 +1,6 @@
 const textArea = document.querySelector('.text-area');
 const mensagem = document.querySelector('.mens-criptografada');
+const btn = document.querySelector('.btn-copiar');
 
 
 
@@ -60,16 +61,12 @@ return texto;
 
 }
 
-/*function btnCopiar() {
-  const copiaText = mensagem.value;
+function btnCopiar() {
+  btn.addEventListener('click', (e) => {
 
-  const teste = copiaText.addEventListener('click', () => {
-    copiaText.select();
-    copiaText.setSelectRange();
-    document.execCommand('copy');
-    alert("Copiado com sucesso!")
-  });
+    navigator.clipboard.writeText(mensagem.value);
 
-  console.log(teste)
+    alert('Texto copiado com sucesso');
+  })
 
-}*/
+}
